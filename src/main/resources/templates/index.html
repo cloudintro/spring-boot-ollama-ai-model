@@ -1,0 +1,22 @@
+<!--Create an html page to accept a text input and call get api with that input as request param-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASK AI</title>
+</head>
+<body>
+    <h1>Welcome to New Gen AI Chat</h1>
+    <form action="/cloudintro-ai-api/api/chat/stream" method="get">
+        <label for="name">Enter the prompt:</label>
+        <input type="text" id="prompt" name="prompt">
+        <button type="submit">chat</button>
+    </form>
+    <!-- display the response on same page without redirect-->
+    <div id="response">
+        <h2>Response:</h2>
+        <p th:text="${response}"></p>
+    </div>
+    
+</body>
+</html>
